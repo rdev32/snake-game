@@ -1,6 +1,11 @@
 import Game from './Game.mjs'
 
 window.addEventListener('load', () => {
-  const game = new Game()
-  game.start()
+  try {
+    const game = new Game()
+    game.start()
+  } catch (err) {
+    console.log('The following error appeared while executing the program:')
+    console.error(err)
+  }
 })
